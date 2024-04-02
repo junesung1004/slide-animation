@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="common.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div class="swiper-container slider"> <!--스와이퍼 슬라이더를 감사는 최상위 컨테이너-->
+    <div class="swiper-wrapper">
+      <!--swiper-container 다음에 와야하는 wrapper 보통 ul처럼  list를 만들어주는 역할이지만 div로 생성 (객체를 복제할때 div로만 복제)-->
+      
+      <!-- item -->
+      <div class="swiper-slide"><!--swiper-slide slide가 작동하는 가장 작은 단위의 클래스-->
+        <img src="./images/visual1.png" alt="비쥬얼 이미지">
+        <div class="wall one"></div>
+        <div class="wall two"></div>
+        <div class="wall three"></div>
+        <div class="wall four"></div>
+      </div>
+
+       <!-- item -->
+       <div class="swiper-slide"><!--swiper-slide slide가 작동하는 가장 작은 단위의 클래스-->
+        <img src="./images/visual2.png" alt="비쥬얼 이미지">
+        <div class="wall one"></div>
+        <div class="wall two"></div>
+        <div class="wall three"></div>
+        <div class="wall four"></div>
+      </div>
+
+       <!-- item -->
+       <div class="swiper-slide"><!--swiper-slide slide가 작동하는 가장 작은 단위의 클래스-->
+        <img src="./images/visual3.png" alt="비쥬얼 이미지">
+        <div class="wall one"></div>
+        <div class="wall two"></div>
+        <div class="wall three"></div>
+        <div class="wall four"></div>
+      </div>
+
+    </div>
+    <!-- 버튼 -->
+    <div class="swiper-button-prev btn">PREV</div>
+    <div class="swiper-button-next btn">NEXT</div>
+    <!-- 페이지네이션 -->
+    <div class="swiper-pagination dot"></div>
+
+  </div>
+</body>
+
+</html>

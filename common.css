@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.slider {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.slider img {
+  display: block;
+  object-fit: cover;
+}
+
+/* 
+wall
+*/
+.wall {
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: white;
+}
+
+.wall.one {
+  left: 0px;
+}
+.wall.two {
+  left: 25%;
+}
+.wall.three {
+  left: 50%;
+}
+.wall.four {
+  left: 75%;
+}
+
+.swiper-slide-active .wall {
+  animation-name: wall-ani;
+  animation-timing-function: linear;
+}
+.swiper-slide-active .wall.one {
+  animation-duration: 500ms;
+}
+.swiper-slide-active .wall.two {
+  animation-duration: 750ms;
+}
+.swiper-slide-active .wall.three {
+  animation-duration: 1000ms;
+}
+.swiper-slide-active .wall.four {
+  animation-duration: 1250ms;
+}
+
+@keyframes wall-ani {
+  0% {
+    width: 100%;
+    backgrund: #333;
+  }
+  100% {
+    width: 1px;
+    background-color: #333;
+  }
+}
+
+/* navigation btn */
+.btn {
+  width: 120px;
+  height: 54px;
+  color: white;
+  font-weight: bold;
+  transition: all 300ms;
+}
+
+.btn::before {
+  content: "";
+  width: 0px;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  background-color: #fff;
+  transition: 300ms;
+  z-index: -1;
+}
+.btn:hover {
+  color: #333;
+}
+
+.btn:hover::before {
+  width: 120%;
+}
+
+.btn::after {
+  content: "";
+  width: 60px;
+  height: 2px;
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn:hover::after {
+  background-color: cyan;
+}
+
+.swiper-button-prev,
+.swiper-button-prev:before,
+.swiper-button-prev:after {
+  left: 0;
+}
+
+.swiper-button-prev {
+  justify-content: end;
+}
+
+.swiper-button-next {
+  justify-content: start;
+}
+
+.swiper-button-next,
+.swiper-button-next::before,
+.swiper-button-next::after {
+  right: 0;
+}
+
+
+/* 페이지 네이션 dot */
+.dot {
+  bottom : 200px !important;
+  height : 40px;
+  gap: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  background-color: #fff;
+  width: 4px;
+  height: 20px;
+  transition: all 300ms;
+  border-radius: 0px;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  height: 100%;
+  background-color: cyan;
+}
+
+.swiper-slide-active img {
+  animation: img-ani 4000ms linear;
+}
+
+@keyframes img-ani {
+  0%{
+    transform: scale(1.1);
+  } 
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* progressbar */
+.swiper-slide-active::after {
+  content: "";
+  width: 100%;
+  height: 10px;
+  background-color: cyan;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  animation: progressbar-ani 4000ms linear
+}
+
+@keyframes progressbar-ani {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
